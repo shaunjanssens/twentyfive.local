@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\LoginActivity" table="login_activity">
+    <indexes>
+      <index name="fk_login_activity_user1_idx" columns="user_id"/>
+    </indexes>
+    <id name="loginId" type="integer" column="login_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
+    <many-to-one field="user" target-entity="User" fetch="LAZY">
+      <join-columns>
+        <join-column name="user_id" referenced-column-name="user_id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

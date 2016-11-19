@@ -1,0 +1,33 @@
+---
+ip: "192.168.10.30"
+memory: 2048
+cpus: 1
+hostname: twentyfive.local
+name: twentyfive.local
+provider: virtualbox
+
+folders:
+    - map: "/Users/shaunjanssens/Code/twentyfive.local"
+      to: "/home/vagrant/twentyfive.local"
+      type: nfs # folder type
+
+sites:
+    - map: www.twentyfive.local
+      to: "/home/vagrant/twentyfive.local/symfony/web"
+      type: symfony # site type
+
+databases:
+    - twentyfive_local
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
