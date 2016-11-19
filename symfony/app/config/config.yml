@@ -10,10 +10,11 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    app.path.attachment_files: /uploads/files/attachments
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -70,3 +71,138 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# WYSIWYG editor
+ivory_ck_editor:
+    input_sync: true
+    default_config: base_config
+    configs:
+        base_config:
+            toolbar:
+                - { name: "styles", items: ['Bold', 'Italic', 'Link', 'BulletedList', 'NumberedList'] }
+
+# Image & file uploader
+vich_uploader:
+    db_driver: orm
+    mappings:
+        attachment_files:
+            uri_prefix:         %app.path.attachment_files%
+            upload_destination: %kernel.root_dir%/../web/uploads/files/attachments
+
+# Easyadmin
+easy_admin:
+    entities:
+        Users:
+          class: AppBundle\Entity\Users
+          list:
+            fields:
+              - fullName
+              - { property: 'email', label: 'E-mail', type: 'email' }
+              - { property: 'role', label: 'Role' }
+              - { property: 'enabled', label: 'Active', type: 'toggle' }
+          form:
+            fields:
+              - { property: 'email', label: 'E-mail', type: 'email' }
+              - { property: 'password', type: 'password' }
+              - { property: 'role', label: 'Role' }
+              - { property: 'firstName', label: 'First name', css_class: 'col-sm-6'}
+              - { property: 'lastName', label: 'Last name', css_class: 'col-sm-6'}
+              - { property: 'displayName', label: 'Displayed name', css_class: 'col-sm-6'}
+              - { property: 'telephone', label: 'Telephone', type: 'number', css_class: 'col-sm-6' }
+              - team
+              - enabled
+        Roles:
+          class: AppBundle\Entity\Roles
+          list:
+            fields:
+              - { property: 'name', label: 'Name' }
+          form:
+            fields:
+              - { property: 'name', label: 'Name' }
+        Organisations:
+          class: AppBundle\Entity\Organisations
+          list:
+            fields:
+              - { property: 'name', label: 'Name' }
+              - { property: 'phone', label: 'Phone number', type: 'tel' }
+          form:
+            fields:
+              - { property: 'name', label: 'Name' }
+              - { property: 'address', label: 'Street & number' }
+              - { property: 'zip', label: 'Zip code' }
+              - { property: 'city', label: 'City' }
+              - { property: 'state', label: 'State' }
+              - { property: 'phone', label: 'Phone number' }
+        Teams:
+          class: AppBundle\Entity\Teams
+          list:
+            fields:
+              - { property: 'name', label: 'Name' }
+              - organisation
+          form:
+            fields:
+              - { property: 'name', label: 'Name' }
+              - { property: 'color', label: 'color', help: 'HEX color code without #' }
+              - organisation
+        Tasks:
+          class: AppBundle\Entity\Tasks
+          list:
+            fields:
+              - { property: 'team', label: 'Team' }
+              - { property: 'user', label: 'For' }
+              - { property: 'name', label: 'Task' }
+              - { property: 'taskCategory', label: 'Category' }
+          form:
+            fields:
+              - { property: 'team', label: 'Team' }
+              - { property: 'user', label: 'For' }
+              - { property: 'name', label: 'Task' }
+              - { property: 'description', label: 'Description', type: 'ckeditor' }
+              - { property: 'taskCategory', label: 'Category' }
+              - { property: 'deadline', label: 'Deadline' }
+        TaskCategories:
+          class: AppBundle\Entity\TaskCategories
+          list:
+            fields:
+              - { property: 'name', label: 'Category' }
+          form:
+            fields:
+              - { property: 'name', label: 'Category' }
+              - { property: 'description', label: 'Description', type: 'ckeditor' }
+        TaskStatus:
+          class: AppBundle\Entity\TaskStatus
+          list:
+            fields:
+              - { property: 'name', label: 'Status' }
+          form:
+            fields:
+              - { property: 'name', label: 'Status' }
+              - { property: 'description', label: 'Description', type: 'ckeditor' }
+        TaskAttachments:
+          class: AppBundle\Entity\TaskAttachments
+          list:
+            fields:
+              - { property: 'url', label: 'File name' }
+          form:
+            fields:
+              - { property: 'attachmentFile', type: 'file' }
+    design:
+        brand_color: '#EA4242'
+        color_scheme: 'light'
+        form_theme: 'vertical'
+        menu:
+          - label: 'User management'
+            icon: 'users'
+            children:
+              - Organisations
+              - Teams
+              - Users
+              - Roles
+          - label: 'Task management'
+            children:
+             - Tasks
+             - TaskCategories
+             - TaskAttachments
+             - TaskStatus
+    list:
+        max_results: 30

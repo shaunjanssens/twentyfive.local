@@ -1,3 +1,3 @@
 users:
-    resource: ApiBundle\Controller\UserController
+    resource: ApiBundle\Controller\UsersController
     type:     rest

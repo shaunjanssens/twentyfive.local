@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Team</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ team.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ team.description }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if team.createdAt %}{{ team.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if team.updatedAt %}{{ team.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Deletedat</th>
+                <td>{% if team.deletedAt %}{{ team.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Teamid</th>
+                <td>{{ team.teamId }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('teams_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('teams_edit', { 'id': team.teamId }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

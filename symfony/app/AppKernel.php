@@ -22,6 +22,12 @@ class AppKernel extends Kernel
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new Nelmio\CorsBundle\NelmioCorsBundle(),
 
+            // Easyadmin
+            new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+
+            // Own bundles
             new AppBundle\AppBundle(),
             new ApiBundle\ApiBundle(),
         ];

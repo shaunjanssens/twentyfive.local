@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Organisation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ organisation.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ organisation.description }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if organisation.createdAt %}{{ organisation.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if organisation.updatedAt %}{{ organisation.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Deletedat</th>
+                <td>{% if organisation.deletedAt %}{{ organisation.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Logo</th>
+                <td>{{ organisation.logo }}</td>
+            </tr>
+            <tr>
+                <th>Organisationid</th>
+                <td>{{ organisation.organisationId }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('organisations_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('organisations_edit', { 'id': organisation.organisationId }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

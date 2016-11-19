@@ -1,0 +1,135 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:3MMP - ProDEV Deadlines
+X-WR-TIMEZONE:Europe/Brussels
+X-WR-CALDESC:Overzicht van alle deadlines.
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20161205
+DTEND;VALUE=DATE:20161206
+DTSTAMP:20161109T150734Z
+UID:k6ku3cqodloro59qpno7hn03sc@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=3MMP -
+  ProDEV Deadlines;X-NUM-GUESTS=0:mailto:0jpdvsgpngfmnjj5f299k5jgq4@group.ca
+ lendar.google.com
+CREATED:20160930T113655Z
+DESCRIPTION:Eerste functionaliteiten aanwezig en getest.\nRuwe versie gebru
+ ikersinterface.\nBijgewerkt versie op repository:\n- Academische Poster\n- 
+ Productiedossier\n- Presentatie\n- Timesheet
+LAST-MODIFIED:20161109T150255Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:[WDAD-IV] Milestone 2: Alpha-versie
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20161205
+DTEND;VALUE=DATE:20161206
+DTSTAMP:20161109T150734Z
+UID:8brc1gvijs50h0hcl9sql2j82k@google.com
+CREATED:20160930T114628Z
+DESCRIPTION:Alle functionaliteiten aanwezig en getest.\n- Gebruikersinterfa
+ ce klaar om te testen.\n- Klaar om door gebruikers getest te woren.\nBijgew
+ erkt versie op repository:\n- Academische Poster\n- Productiedossier\n- Pre
+ sentatie\n- Timesheet
+LAST-MODIFIED:20160930T114628Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:[NMDAD-III] Milestone 3: Beta-versie
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20161107
+DTEND;VALUE=DATE:20161108
+DTSTAMP:20161109T150734Z
+UID:n5neabo632tjtdnj6cdpju6ma4@google.com
+CREATED:20160930T114610Z
+DESCRIPTION:Eerste functionaliteiten aanwezig en getest.\nRuwe versie gebru
+ ikersinterface.\nBijgewerkt versie op repository:\n- Academische Poster\n- 
+ Productiedossier\n- Presentatie\n- Timesheet
+LAST-MODIFIED:20160930T114610Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:[NMDAD-III] Milestone 2: Alpha-versie
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20161017
+DTEND;VALUE=DATE:20161018
+DTSTAMP:20161109T150734Z
+UID:f718496rmtk6f7v360a6gmnqo8@google.com
+CREATED:20160930T114548Z
+DESCRIPTION:Academische Poster\n- Opmaak en vormgeving klaar\n- Inhoud aanw
+ ezig\, maar moet nog aangevuld of geüpdatet worden.\nProductiedossier\n- Op
+ maak en vormgeving klaar\n- Inhoud aanwezig\, maar moet nog aangevuld of ge
+ üpdatet worden.\nPresentatie\n- Opmaak en vormgeving klaar\n- Inhoud aanwez
+ ig\, maar moet nog aangevuld of geüpdatet worden.\nTimesheet\n- Ingevuld to
+ t op vandaag.\n- Eerste versie op repository:\n- Academische Poster\n- Prod
+ uctiedossier\n- Presentatie\n- Timesheet
+LAST-MODIFIED:20160930T114555Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:[NMDAD-III] Milestone 1: Voorbereiding Klaar
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20161227T170000Z
+DTEND:20161227T180000Z
+DTSTAMP:20161109T150734Z
+UID:b54v8v4oasquqvcdb30dqpu7k8@google.com
+CREATED:20160930T114402Z
+DESCRIPTION:Alle functionaliteiten aanwezig.\n- Gebruikersinterface opgepoe
+ tst.\n- Klaar voor Acceptance Test door klant.\nDefinitieve versie op repos
+ itory:\n- Academische Poster\n- Productiedossier\n- Presentatie\n- Timeshee
+ t
+LAST-MODIFIED:20160930T114412Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:[WDAD-IV] Milestone 4: Release Candidate-versie 1EK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20161223T170000Z
+DTEND:20161223T180000Z
+DTSTAMP:20161109T150734Z
+UID:oghaj5qieg2nk3ot58ut520jnc@google.com
+CREATED:20160930T114153Z
+DESCRIPTION:Alle functionaliteiten aanwezig.\n- Gebruikersinterface opgepoe
+ tst.\n- Klaar voor Acceptance Test door klant.\nDefinitieve versie op repos
+ itory:\n- Academische Poster\n- Productiedossier\n- Presentatie\n- Timeshee
+ t
+LAST-MODIFIED:20160930T114258Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:[NMDAD-III] Milestone 4: Release Candidate - versie 1EK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20161017
+DTEND;VALUE=DATE:20161018
+DTSTAMP:20161109T150734Z
+UID:ch9j1540ps1bouq1ue28c3ce0c@google.com
+CREATED:20160930T113541Z
+DESCRIPTION:Academische Poster\n- Opmaak en vormgeving klaar\n- Inhoud aanw
+ ezig\, maar moet nog aangevuld of geüpdatet worden.\nProductiedossier\n- Op
+ maak en vormgeving klaar\n- Inhoud aanwezig\, maar moet nog aangevuld of ge
+ üpdatet worden.\nPresentatie\n- Opmaak en vormgeving klaar\n- Inhoud aanwez
+ ig\, maar moet nog aangevuld of geüpdatet worden.\nTimesheet\n- Ingevuld to
+ t op vandaag.\n- Eerste versie op repository:\n- Academische Poster\n- Prod
+ uctiedossier\n- Presentatie\n- Timesheet
+LAST-MODIFIED:20160930T113543Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:[WDAD-IV] Milestone 1: Voorbereiding Klaar
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

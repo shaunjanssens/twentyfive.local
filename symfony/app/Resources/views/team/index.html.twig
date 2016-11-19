@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Teams list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Deletedat</th>
+                <th>Teamid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for team in teams %}
+            <tr>
+                <td><a href="{{ path('teams_show', { 'id': team.teamId }) }}">{{ team.name }}</a></td>
+                <td>{{ team.description }}</td>
+                <td>{% if team.createdAt %}{{ team.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if team.updatedAt %}{{ team.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if team.deletedAt %}{{ team.deletedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ team.teamId }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('teams_show', { 'id': team.teamId }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('teams_edit', { 'id': team.teamId }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('teams_new') }}">Create a new team</a>
+        </li>
+    </ul>
+{% endblock %}

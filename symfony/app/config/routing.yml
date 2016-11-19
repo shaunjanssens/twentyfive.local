@@ -1,17 +1,13 @@
-# Bundles
-# =======
-
-# Application Programming Interface
-# ---------------------------------
 api:
-
     prefix:   /api
     resource: "@ApiBundle/Resources/config/routing.yml"
     type:     rest
 
-# Application
-# -----------
-
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin

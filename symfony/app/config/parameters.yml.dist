@@ -4,9 +4,9 @@
 parameters:
     database_host:           127.0.0.1
     database_port:           ~
-    database_name:           twentyfive_local
-    database_user:           nmdad3_db_user
-    database_password:       nmdad3_db_password
+    database_name:          twentyfive
+    database_user:          twentyfive_db_user
+    database_password:      twentyfive_db_password
     # Admin
     database_admin_user:     homestead
     database_admin_password: secret
